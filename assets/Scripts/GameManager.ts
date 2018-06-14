@@ -22,7 +22,15 @@ export default class GameManager extends cc.Component {
     @property(cc.Float)
     private meteorInterval: number = 0;
 
+    @property(cc.Float)
+    private distanceChangeInterval: number = 0;
+
+    @property(cc.Label)
+    private labelDistance: cc.Label = null;
+
     private timer: number = 0;
+    private distanceTimer: number = 0;
+    private movedDistance: number = 0;
 
     onLoad () {
         this.initializeTouchEvent()
@@ -63,7 +71,15 @@ export default class GameManager extends cc.Component {
 
     update (dt) {
         this.timer += dt;
-        if (this.timer > this.meteorInterval) {
+        this.distanceTimer += dt;
+        if (this.distanceTimer >= this.distanceChangeInterval) {
+            this.movedDistance += 0.1;
+            this.distanceTimer = 0;
+        }
+        let disStr = this.movedDistance.toFixed(1);
+        this.labelDistance.string = disStr + "KM";
+
+        if (this.timer >= this.meteorInterval) {
             let meteorNode = cc.instantiate(this.meteorPrefab);
             cc.director.getScene().addChild(meteorNode);
             meteorNode.getComponent("MeteorController").randomTheMeteor();

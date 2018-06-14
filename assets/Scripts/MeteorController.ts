@@ -18,7 +18,8 @@ export default class NewClass extends cc.Component {
     }
 
     start () {
-
+        let action = cc.rotateBy(2, -360, 0);
+        this.node.runAction(cc.repeatForever(action));
     }
 
     public randomTheMeteor (): void {
@@ -29,16 +30,19 @@ export default class NewClass extends cc.Component {
     private getRandomMeteorPosition (): cc.Vec2 {
         let position = this.node.getPosition();
         position.x = Math.random() * this.meteorMaxPositionX;
-        position.y = Math.random() * this.meteorMaxPositionY;
+        position.y = (Math.random() + 1) * this.meteorMaxPositionY;
         return position;
     }
 
     private getRandomMeteorFrame (): cc.SpriteFrame {
-        return this.meteorFrames[Math.random() * this.meteorFrames.length]
+        return this.meteorFrames[Math.floor(Math.random() * this.meteorFrames.length)]
     }
 
     update (dt) {
-        let positionY = this.node.getPositionY() - 100;
+        let positionY = this.node.getPositionY() - 10;
         this.node.setPositionY(positionY);
+        if (positionY < -100) {
+            this.node.removeFromParent();
+        }
     }
 }
