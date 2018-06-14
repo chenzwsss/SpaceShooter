@@ -18,7 +18,7 @@ export default class NewClass extends cc.Component {
     }
 
     start () {
-        let action = cc.rotateBy(2, -360, 0);
+        let action = cc.rotateBy(2, -360, -360);
         this.node.runAction(cc.repeatForever(action));
     }
 
