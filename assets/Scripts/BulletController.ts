@@ -6,11 +6,9 @@ export default class BulletController extends cc.Component {
     @property(cc.Float)
     private bulletSpeed: number = 0;
 
-    // onLoad () {}
+    // onLoad () { }
 
-    start () {
-
-    }
+    // start () { }
 
     update (dt) {
         let positionY = this.node.getPositionY() - this.bulletSpeed;

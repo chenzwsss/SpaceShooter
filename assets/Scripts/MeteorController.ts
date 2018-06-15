@@ -17,8 +17,7 @@ export default class NewClass extends cc.Component {
         this.meteorMaxPositionY = cc.winSize.height + 100;
     }
 
-    // start () {
-    // }
+    // start () { }
 
     public randomTheMeteor (): void {
         this.node.setPosition(this.getRandomMeteorPosition());
@@ -39,7 +38,7 @@ export default class NewClass extends cc.Component {
         }
     }
 
-    lateUpdate (dt) {
+    LateUpdate (dt) {
         this.node.rotation += this.rotationPerFrame;
     }
 }

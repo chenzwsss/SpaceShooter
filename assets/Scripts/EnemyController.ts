@@ -19,7 +19,7 @@ export default class EnemyController extends cc.Component {
     private maxPositionX: number = 0;
     private maxPositionY: number = 0;
     // 4种情况，上，下，左，右
-    private generateDirections: [cc.Integer] = [Directions.TOP, Directions.LEFT, Directions.RIGHT, Directions.BOTTOM];
+    private generateDirections: number[] = [Directions.TOP, Directions.LEFT, Directions.RIGHT, Directions.BOTTOM];
     private isMoveOver: boolean = false;
 
     private timer: number = 0;
@@ -29,9 +29,7 @@ export default class EnemyController extends cc.Component {
         this.maxPositionY = cc.winSize.height * 2;
     }
 
-    start () {
-
-    }
+    // start () { }
 
     update (dt) {
         if (true == this.isMoveOver) {

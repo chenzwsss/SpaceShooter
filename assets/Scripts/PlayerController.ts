@@ -12,13 +12,9 @@ export default class PlayerController extends cc.Component {
     onLoad () {
         this.eventManager = EventManager.getInstance();
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
-        cc.director.getCollisionManager().enabledDrawBoundingBox = true;
     }
 
-    start () {
-
-    }
+    // start () { }
 
     public setPlayerStatus (status: number): void {
         this.getComponent(cc.Sprite).spriteFrame = this.playerSpriteFrames[status];
