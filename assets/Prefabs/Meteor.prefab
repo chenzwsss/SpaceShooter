@@ -22,10 +22,13 @@
       },
       {
         "__id__": 3
+      },
+      {
+        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 4
+      "__id__": 5
     },
     "_id": "",
     "_opacity": 255,
@@ -44,8 +47,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 44,
-      "height": 42
+      "width": 136,
+      "height": 111
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -72,7 +75,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "79a09dc3-718a-435d-8ffb-12fca5a3b6cf"
+      "__uuid__": "cc2e0383-0b88-4aa8-8416-c2561df9029c"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -97,15 +100,27 @@
       "__id__": 1
     },
     "_enabled": true,
-    "meteorFrames": [
-      {
-        "__uuid__": "79a09dc3-718a-435d-8ffb-12fca5a3b6cf"
-      },
-      {
-        "__uuid__": "cc2e0383-0b88-4aa8-8416-c2561df9029c"
-      }
-    ],
-    "meteorSpeed": 0
+    "meteorSpeed": 10
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 136,
+      "height": 111
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

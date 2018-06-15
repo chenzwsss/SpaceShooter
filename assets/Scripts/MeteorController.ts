@@ -3,9 +3,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class NewClass extends cc.Component {
 
-    @property([cc.SpriteFrame])
-    private meteorFrames: cc.SpriteFrame[] = [];
-
     @property(cc.Float)
     private meteorSpeed: number = 0;
 
@@ -24,7 +21,6 @@ export default class NewClass extends cc.Component {
 
     public randomTheMeteor (): void {
         this.node.setPosition(this.getRandomMeteorPosition());
-        this.getComponent(cc.Sprite).spriteFrame = this.getRandomMeteorFrame();
     }
 
     private getRandomMeteorPosition (): cc.Vec2 {
@@ -34,12 +30,8 @@ export default class NewClass extends cc.Component {
         return position;
     }
 
-    private getRandomMeteorFrame (): cc.SpriteFrame {
-        return this.meteorFrames[Math.floor(Math.random() * this.meteorFrames.length)]
-    }
-
     update (dt) {
-        let positionY = this.node.getPositionY() - 10;
+        let positionY = this.node.getPositionY() - this.meteorSpeed;
         this.node.setPositionY(positionY);
         if (positionY < -100) {
             this.node.removeFromParent();

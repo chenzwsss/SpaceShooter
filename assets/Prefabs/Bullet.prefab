@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "PlayerBullet",
+    "_name": "Bullet",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
