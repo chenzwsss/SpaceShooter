@@ -13,9 +13,9 @@ export default class BulletController extends cc.Component {
     }
 
     update (dt) {
-        let positionY = this.node.getPositionY() + this.bulletSpeed;
+        let positionY = this.node.getPositionY() - this.bulletSpeed;
         this.node.setPositionY(positionY);
-        if (positionY > cc.winSize.height) {
+        if (positionY < 0) {
             this.node.removeFromParent();
         }
     }

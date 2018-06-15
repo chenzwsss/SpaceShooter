@@ -71,17 +71,17 @@
         "__id__": 22
       },
       {
-        "__id__": 26
+        "__id__": 28
       },
       {
-        "__id__": 28
+        "__id__": 30
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 35
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -762,18 +762,22 @@
     "_parent": {
       "__id__": 2
     },
-    "_children": [],
+    "_children": [
+      {
+        "__id__": 23
+      }
+    ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 23
-      },
-      {
-        "__id__": 24
-      },
-      {
         "__id__": 25
+      },
+      {
+        "__id__": 26
+      },
+      {
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -812,6 +816,80 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "LabelLog",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 22
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 24
+      }
+    ],
+    "_prefab": null,
+    "_id": "e3NjcQgIFKvbNtTCoZDcSe",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 98,
+      "height": 40
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 70
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_N$string": "Label",
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -860,11 +938,7 @@
       {
         "__uuid__": "080ffc3d-3100-4fa1-a41d-c51ec29e7438"
       }
-    ],
-    "bulletInterval": 0.25,
-    "bulletPrefab": {
-      "__uuid__": "6d17b997-51b3-48e5-95a9-dd7add8ee0b1"
-    }
+    ]
   },
   {
     "__type__": "cc.BoxCollider",
@@ -898,7 +972,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 29
       }
     ],
     "_prefab": null,
@@ -943,7 +1017,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 26
+      "__id__": 28
     },
     "_enabled": true,
     "canvas": {
@@ -964,7 +1038,26 @@
       "__id__": 20
     },
     "gameOverNode": {
-      "__id__": 28
+      "__id__": 30
+    },
+    "movePerFrame": 0.1,
+    "lifeCostPerFrame": 2,
+    "lifeAddedPerMeteor": 200,
+    "lifeCostPerBullet": 10,
+    "enemyPrefabs": [
+      {
+        "__uuid__": "13126c1e-ec54-4fed-85a3-3e60b580b68d"
+      },
+      {
+        "__uuid__": "4d1160cb-f9d6-44a6-bc02-29f0aa32cfe4"
+      }
+    ],
+    "enemyGenerateInterval": 5.2,
+    "labelLog": {
+      "__id__": 24
+    },
+    "labelEnergy": {
+      "__id__": 18
     }
   },
   {
@@ -976,10 +1069,10 @@
     },
     "_children": [
       {
-        "__id__": 29
+        "__id__": 31
       },
       {
-        "__id__": 31
+        "__id__": 33
       }
     ],
     "_tag": -1,
@@ -1027,14 +1120,14 @@
     "_name": "LabelGameOver",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 28
+      "__id__": 30
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 30
+        "__id__": 32
       }
     ],
     "_prefab": null,
@@ -1079,7 +1172,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 29
+      "__id__": 31
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -1103,17 +1196,17 @@
     "_name": "LabelRestart",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 28
+      "__id__": 30
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 32
+        "__id__": 34
       },
       {
-        "__id__": 33
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -1158,7 +1251,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 31
+      "__id__": 33
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -1180,7 +1273,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 31
+      "__id__": 33
     },
     "_enabled": true,
     "transition": 3,
@@ -1202,7 +1295,7 @@
     "zoomScale": 1.2,
     "clickEvents": [
       {
-        "__id__": 34
+        "__id__": 36
       }
     ],
     "_N$interactable": true,
@@ -1228,13 +1321,13 @@
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
-      "__id__": 31
+      "__id__": 33
     }
   },
   {
     "__type__": "cc.ClickEvent",
     "target": {
-      "__id__": 26
+      "__id__": 28
     },
     "component": "GameManager",
     "handler": "onBtnGameRestart",

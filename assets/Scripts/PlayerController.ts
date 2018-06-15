@@ -7,13 +7,6 @@ export default class PlayerController extends cc.Component {
     @property([cc.SpriteFrame])
     private playerSpriteFrames: cc.SpriteFrame[] = [];
 
-    @property(cc.Float)
-    private bulletInterval: number = 0.0;
-
-    @property(cc.Prefab)
-    private bulletPrefab: cc.Prefab = null;
-
-    private timer: number = 0;
     private eventManager: cc.EventTarget = null;
 
     onLoad () {
@@ -40,17 +33,9 @@ export default class PlayerController extends cc.Component {
         if (other.tag == 0) {
             other.node.active = false;
             this.eventManager.emit('METEOR_ON_COLLIDER');
+        } else if (other.tag == 1) {
+            other.node.active = false;
+            this.eventManager.emit('BULLET_ON_COLLIDER');
         }
     }
-
-    // update (dt) {
-    //     this.timer += dt;
-    //     if (this.timer >= this.bulletInterval) {
-    //         let bullet = cc.instantiate(this.bulletPrefab);
-    //         let positionPlayer = this.node.getPosition();
-    //         bullet.setPosition(positionPlayer.x, positionPlayer.y + 50);
-    //         cc.director.getScene().addChild(bullet);
-    //         this.timer = 0;
-    //     }
-    // }
 }
